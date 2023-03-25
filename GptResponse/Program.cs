@@ -47,7 +47,9 @@ internal static class Program {
             }
             //var response = client.SendPrompt(request, "gpt-3.5-turbo-0301").Result;
             //var response = client.SendPrompt(request, "davinci").Result;
-            var results = client.SendPrompt(request, "davinci").Result;
+            //var model = "GPT-4";
+            var model = "davinci";
+            var results = client.SendPrompt(request, model).Result;
 
             Console.WriteLine(results);
         }
