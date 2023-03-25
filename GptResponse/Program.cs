@@ -24,16 +24,15 @@ public class OpenAIApiClient
 
         var response = await _httpClient.PostAsJsonAsync("completions", requestBody);
         response.EnsureSuccessStatusCode();
-        var responseBody = await response.Content;//.Content.ReadAsStringAsync();
+        var responseBody = response.Content.ReadAsStringAsync();
 
-        var result = await responseBody.Result;
-        return result;
+        return responseBody.Result;
     }
 }
 
 internal static class Program {
     private static void Main(string[] args) {
-        var client = new OpenAIApiClient("you-api");
+        var client = new OpenAIApiClient("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");
         while (true) {
             Console.Write("> ");
             var request = Console.ReadLine();
@@ -46,8 +45,7 @@ internal static class Program {
             var results = client.SendPrompt(request, "gpt-4");
             //var response = results.Result;
                 
-            Console.WriteLine(results.Result
-            );
+            Console.WriteLine(results.Result);
         }
     }
 }
