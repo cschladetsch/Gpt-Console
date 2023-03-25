@@ -33,7 +33,7 @@ public class OpenAIApiClient
 
 internal static class Program {
     private static void Main(string[] args) {
-        var client = new OpenAIApiClient("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");
+        var client = new OpenAIApiClient("you-api");
         while (true) {
             Console.Write("> ");
             var request = Console.ReadLine();
