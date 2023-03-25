@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GptResponse", "GptResponse\GptResponse.csproj", "{0ED160FC-55AC-4168-9A04-1A95E692C9AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0ED160FC-55AC-4168-9A04-1A95E692C9AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0ED160FC-55AC-4168-9A04-1A95E692C9AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0ED160FC-55AC-4168-9A04-1A95E692C9AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0ED160FC-55AC-4168-9A04-1A95E692C9AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
