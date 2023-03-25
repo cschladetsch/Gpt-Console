@@ -32,7 +32,12 @@ public class OpenAIApiClient
 
 internal static class Program {
     private static void Main(string[] args) {
-        var client = new OpenAIApiClient("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");
+        var apiKey = Environment.GetEnvironmentVariable("OPENAI_API_KEY");
+        if (string.IsNullOrEmpty(apiKey)) {
+            Console.WriteLine("Please set the OPENAI_API_KEY environment variable.");
+            return;
+        }   
+        var client = new OpenAIApiClient(apiKey);
         while (true) {
             Console.Write("> ");
             var request = Console.ReadLine();
@@ -42,10 +47,9 @@ internal static class Program {
             }
             //var response = client.SendPrompt(request, "gpt-3.5-turbo-0301").Result;
             //var response = client.SendPrompt(request, "davinci").Result;
-            var results = client.SendPrompt(request, "gpt-4");
-            //var response = results.Result;
-                
-            Console.WriteLine(results.Result);
+            var results = client.SendPrompt(request, "davinci").Result;
+
+            Console.WriteLine(results);
         }
     }
 }
